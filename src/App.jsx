@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import TodoList from './TodoList'
 import useStore from './store/Store'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [taskName,setTaskName] = useState('')
@@ -15,6 +17,7 @@ const App = () => {
         <button className = 'btn btn-primary'onClick={() => addTask(taskName)}>Add</button>
       </div>
       <TodoList/>
+      <ToastContainer/>
     </div>
   )
 }
